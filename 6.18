@@ -1,0 +1,15 @@
+def get_num_of_characters(inputStr):
+    outputStr = len(inputStr)
+    return outputStr #returns number of characters in inputStr
+
+def output_without_whitespace(inputStr):
+    outputStr = inputStr.replace(" ","")
+    return outputStr #retrurns inputStr without whitespace
+
+if __name__ == '__main__':
+    user_input = input('Enter a sentence or phrase:\n')
+    num_char = get_num_of_characters(user_input)
+    str_no_white = output_without_whitespace(user_input)
+    print('\nYou entered: ' + user_input + '\n')
+    print('Number of characters:', num_char)
+    print('String with no whitespace:', str_no_white)
