@@ -1,0 +1,16 @@
+while True:
+        s=input('Enter input string:')
+        print("\n".rstrip("\n"))
+        if(s!='q'):
+            s=s.replace(' ', '')
+            if ',' in s:
+
+                s=s.split(',')
+
+                print ('First word: ' + s[0])
+                print ('Second word: ' + s[1])
+                print("\n".rstrip("\n"))
+            else:
+               print('Error: No comma in string.\n')
+        else:
+            break
