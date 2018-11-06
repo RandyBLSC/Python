@@ -1,0 +1,54 @@
+team = {}
+
+i = 1
+
+for i in range(1,6):
+  jer = int(input('Enter player {}\'s jersey number:\n' .format(i)))
+  get_rating = int(input('Enter player {}\'s rating:\n' .format(i)))
+  print()
+  if jer < 0 and jer > 99 and get_rating <= 0 and get_rating <= 9:
+    print('invalid entry')
+    break
+  else:
+    team[jer] = get_rating
+
+print('ROSTER')
+roster_sort = sorted(team.keys())
+for jer in roster_sort:
+    print('Jersey number: {}, Rating: {}' .format(jer, team[jer]))
+menu_option = ''
+while menu_option != 'q':
+    print('\nMENU\na - Add player\nd - Remove player\nu - Update player rating\nr - Output players above a rating\no - Output roster\nq - Quit\n')
+    menu_option = input('Choose an option:\n')
+
+
+
+    if menu_option == 'a':
+      jer = int(input('Enter a new player\'s jersey number:\n' .format(i)))
+      get_rating = int(input('Enter the players\'s rating:' .format(i)))
+      team[jer] = get_rating
+
+    elif menu_option == 'd':
+      jer = int(input('Enter a jersey number:'))
+      if jer in team.keys():
+        del team[jer]
+
+    elif menu_option == 'u':
+      jer = int(input('Enter a jersey number: '))
+      if jer in team.keys():
+        get_rating = int(input('Enter a new rating for player: '))
+        team[jer] = get_rating
+
+    elif menu_option == 'o':
+        print('ROSTER')
+        roster_sort = sorted(team.keys())
+        for jer in roster_sort:
+            print('Jersey number: {}, Rating: {}' .format(jer, team[jer]))
+
+    elif menu_option == 'r':
+      get_rating = int(input('Enter a rating'))
+      print('ABOVE {}'.format(get_rating))
+      roster_sort = sorted(team.keys())
+      for jer, rating in team.items():
+          if rating > get_rating:
+            print('Jersey number: {}, Rating: {}' .format(jer, rating))
