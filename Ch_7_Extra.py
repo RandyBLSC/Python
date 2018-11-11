@@ -35,7 +35,6 @@ def igpay_aitenlay():
         #print(my_new_sentence.capitalize())
     print('Pig Latin:\n',my_new_sentence.capitalize())
 
-
 def vowel():
     v,c,o=process_vowel()
     print('Vowels:',v)
@@ -57,8 +56,6 @@ def process_vowel():
             o_counter+=1
     return v_counter,c_counter,o_counter
 
-
-
 def initials():
     my_name=input('Enter your full name:')
     my_split=my_name.split(' ')    
@@ -67,9 +64,6 @@ def initials():
     my_last=my_split[2]
     my_initials=my_first[0]+'.' + my_middle[0] + '.'+my_last[0] + '.'
     print('Your initials are :',my_initials.upper())
-
-
-
 
 def alpha_phone():
     ph_dictionary={
@@ -82,7 +76,6 @@ def alpha_phone():
         'T':8,'U':8,'V':8,
         'W':9,'X':9,'Y':9,'Z':9
     }
-
     
     my_phone_number=input('Enter your 10 digit phone number:')
     my_new_phone_number=''
@@ -96,9 +89,6 @@ def alpha_phone():
             #print('%s is not alpha' % (x))
             my_new_phone_number += x
     print('Your number is:',my_new_phone_number)
-
-
-
 
 if __name__ == '__main__':
     # Complete main section of code
